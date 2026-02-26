@@ -11,6 +11,7 @@ export default defineConfig({
   },
   server: {
     port: 5173,
+    host: true, // Listen on all interfaces (needed for iPad/mobile access)
     proxy: {
       '/socket.io': {
         target: 'http://localhost:3001',
